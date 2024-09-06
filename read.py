@@ -14,5 +14,5 @@ def readMemberId(member_id):
     for member in members:
         if member['id'] == member_id:
             print(f"ID: {member['id']}, Name: {member['name']}, Birth: {member['birth']}")
-            return
+            return member
     print(f"회원 ID {member_id}를 찾을 수 없습니다.")

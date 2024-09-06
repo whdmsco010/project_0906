@@ -1,10 +1,10 @@
-from createmember import members
-from read import readMemberId
-# 회원 삭제
+from createmember import members  
+from read import readMemberId  
+
 def deleteMember(id):
     member = readMemberId(id)
     if member:
-        members.remove(member)
-        print(f"'{id}' 삭제")
+        members.remove(member) 
+        print(f"회원 '{id}' 삭제 완료")
     else:
-        print(f"'{id}' 삭제 x")
+        print(f"회원 '{id}'를 찾을 수 없습니다. 삭제할 수 없습니다.")
