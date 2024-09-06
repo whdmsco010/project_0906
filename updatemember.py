@@ -1,3 +1,4 @@
+from read import readMemberId
 # 회원 수정
 def updateMember(id, name=None, birth=None):
     member = readMemberId(id)
