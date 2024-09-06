@@ -1,3 +1,5 @@
+from createmember import members
+from read import readMemberId
 # 회원 삭제
 def deleteMember(id):
     member = readMemberId(id)

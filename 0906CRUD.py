@@ -1,4 +1,6 @@
 from read import readMember, readMemberId
+from updatemember import updateMember
+from deletemember import deleteMember
 
 
 def menu_selection():
@@ -21,11 +23,19 @@ def menu_selection():
             except ValueError:
                 print("올바른 숫자를 입력하세요.")
     elif menu == "U":
-        print()
-        # Update 관련 로직 추가
+        try:
+            id = int(input("수정할 회원의 ID를 입력하세요: "))
+            name = input("수정할 이름 (변경하지 않으려면 Enter): ")
+            birth = input("수정할 생일 (변경하지 않으려면 Enter): ")
+            updateMember(id, name, birth)
+        except ValueError:
+            print("잘못된 입력입니다.")
     elif menu == "D":
-        print()
-        # Delete 관련 로직 추가
+        try:
+            id = int(input("삭제할 회원의 ID를 입력하세요: "))
+            deleteMember(id)
+        except ValueError:
+                print("잘못된 입력입니다.")
     else:
         print("잘못된 입력입니다. 다시 시도하세요.")
 
